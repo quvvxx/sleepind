@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "TMoneyDungunbaram";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MangoBoardTtobaks";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-L.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+body {
+  font-family: "TMoneyDungunbaram";
+  margin: 0;
+  background-color: #f8f7fe;
+}
+
+.helloContent {
+  color: #3f384d;
+  font-weight: bold;
+}
+
+.helloComment {
+  color: gray;
+  font-weight: bold;
+}
+
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #181f4a;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar > div > a {
+  display: flex;
+  align-items: center;
+  padding: 22px 25px;
+
+  color: white;
+  text-decoration: none;
+}
+
+.contentboard {
+  flex: 1;
+  border: 3px solid blue;
+}
+
+.hello-text {
+  margin-left: 30px;
+}
+
+.imagesleep {
+  margin-top: 110px;
+}
+
+.imagesleep img {
+  width: 200px;
+  height: auto;
+  align-items: center;
+
+  display: block;
+  margin: 0 auto;
+}
+
+span {
+  display: block;
+  margin-left: 15px;
+}
+
+.logo img {
+  width: 200px;
+}
+
+.logo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar div a:hover {
+  background-color: #373c66;
+  color: white;
+}
+
+.hello-icons {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  /* margin-bottom: 10px; */
+  margin-right: 10px;
+}
+
+.hello-box {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.connect-analysis {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 580px;
+  height: 430px;
+  border-radius: 16px;
+  margin-left: 30px;
+  margin-top: 25px;
+  background-image: url(../images/analaz_Card.png);
+  background-size: cover;
+}
+
+.text1 {
+  color: rgb(226, 223, 223);
+  margin-left: 40px;
+  margin-top: 60px;
+}
+
+.text2 {
+  color: rgb(226, 223, 223);
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.connect-analysis > h3 {
+  color: white;
+  font-size: 33px;
+  font-weight: normal;
+  margin-left: 40px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.bt {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: white;
+  background-color: #7871dd;
+  padding: 10px 20px;
+  margin-left: 40px;
+  margin-top: 50px;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.1s ease;
+}
+
+.bt:active {
+  transform: scale(0.95);
+}
