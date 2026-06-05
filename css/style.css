@@ -209,6 +209,7 @@ header {
 
 .dashboard-box {
   display: flex;
+  align-items: flex-start;
 }
 
 .time-box h4 {
@@ -285,7 +286,7 @@ header {
 .average-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 470px;
-  height: 170px;
+  height: 220px; /* 수정 */
   margin-top: 25px;
   margin-left: 30px;
   border-radius: 16px;
@@ -296,4 +297,213 @@ header {
   display: flex;
   flex-wrap: wrap;
   width: 530px;
+}
+
+.average-box {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 470px;
+
+  /* 💡 원하시는 세로 크기를 여기에 숫자로 딱 지정하세요! */
+  height: 190px;
+
+  margin-top: 30px;
+  margin-left: 30px;
+  border-radius: 16px;
+  background-color: white;
+  padding: 20px 24px; /* 박스가 줄어든 만큼 위아래 패딩도 살짝 줄임 */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* (참고) 글씨 마진은 그대로 두거나 살짝만 만지셔도 됩니다 */
+.aver-text {
+  font-family: "TMoneyDungunbaram";
+  font-size: 16px;
+  color: #333333;
+  margin: 0 0 8px 0;
+}
+
+.aver {
+  font-family: "TMoneyDungunbaram";
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 10px 0;
+  margin-right: 0;
+  padding-right: 0;
+  width: 200px;
+}
+
+.aver b {
+  font-size: 38px;
+  font-weight: 600;
+}
+/* 2. 그래프 이미지가 박스 밖으로 탈출하지 못하게 막기 */
+.img-box {
+  width: 100%;
+  flex: 1; /* 박스 남은 공간을 이미지 영역이 채움 */
+  display: flex;
+  justify-content: end; /* 가로 가운데 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  overflow: hidden;
+}
+
+.img-box img {
+  height: auto; /* 원하는 세로 높이 지정 */
+  width: 300px; /* 💡 고정값(250px) 대신 auto를 써야 비율이 깨지지 않습니다 */
+  display: block;
+  margin-right: 0; /* 💡 불필요한 margin-left: 170px 제거 */
+}
+
+.emotion-box {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 320px;
+  height: 195px;
+  margin-left: 30px;
+  margin-top: 0;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.emotion-text {
+  font-family: "TMoneyDungunbaram";
+  font-size: 16px;
+  color: #333333;
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+
+.emotion {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.emo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.emo-box img {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 67px;
+}
+
+.emo-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 90px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.emo-ms {
+  margin-top: 5px;
+  color: #666;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.bottom-card {
+  display: flex;
+  gap: 30px;
+  margin-left: 0px;
+  margin-top: 25px;
+}
+
+.recommend-box {
+  width: 380px;
+  height: 195px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.score-box {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 320px;
+  height: 195px;
+  margin-top: 0;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.sc-box {
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.score-text {
+  margin-left: 20px;
+}
+
+.score-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 90px;
+  margin-right: 10px;
+}
+
+.score b {
+  font-size: 40px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.score {
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+.score-ms {
+  margin-top: 5px;
+  color: #666;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-left: 20px;
+}
+
+.sc-box img {
+  width: 140px; /* 220px 카드 크기에 맞게 이미지 크기 최적화 */
+  height: auto;
+  margin-top: 10px; /* 왼쪽 텍스트 덩어리와 수직 균형을 맞추기 위한 여백 */
+  margin-bottom: 70px; /* 기존 80px 제거 */
+  margin-right: 20px;
+}
+
+.sc-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rc-ms {
+  margin-top: 5px;
+  color: #666;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+.rc-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 90px;
+  margin-right: 10px;
 }
