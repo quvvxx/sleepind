@@ -11,14 +11,6 @@
   font-display: swap;
 }
 
-/* '망고보드 또박' 웹 폰트 불러오기 (포인트 글꼴) */
-@font-face {
-  font-family: "MangoBoardTtobaks";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-L.woff2")
-  format("woff2");
-  font-weight: 300;
-  font-display: swap;
-}
 
 /* 웹페이지 전체의 기본 여백을 없애고 배경색과 기본 폰트 지정 */
 body {
@@ -96,6 +88,7 @@ span {
   flex: 1;
   display: flex;
   flex-direction: column;
+
 }
 
 /* 헤더와 대시보드 내용물이 위아래로 쌓이도록 설정 */
@@ -398,7 +391,7 @@ header {
 .emotion-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 320px;
-  height: 195px;
+  height: 180px;
   margin-left: 30px;
   margin-top: 0;
   border-radius: 16px;
@@ -416,17 +409,18 @@ header {
   gap: 10px;
   padding-left: 0;
   padding-right: 0;
+  height: 100px;
 }
 .emo-box img {
   width: 150px;
   margin: 0;
   padding: 0;
-  margin-bottom: 67px;
+  margin-top: 20px;
 }
 .emo-info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 90px;
+  margin-bottom: 5px;
   margin-right: 10px;
   margin-top: 20px;
 }
@@ -442,7 +436,7 @@ header {
 .score-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 320px;
-  height: 195px;
+  height: 180px;
   margin-top: 0;
   border-radius: 16px;
   background-color: white;
@@ -452,6 +446,7 @@ header {
   gap: 10px;
   padding-left: 0;
   padding-right: 0;
+  height: 100px;
 }
 .score-text {
   margin-left: 20px;
@@ -459,7 +454,7 @@ header {
 .score-info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 90px;
+  margin-bottom: 10px;
   margin-right: 10px;
 }
 .score b {
@@ -485,25 +480,26 @@ header {
   width: 140px;
   height: auto;
   margin-top: 10px;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
   margin-right: 20px;
 }
 .sc-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100px;
 }
 
 /* (3) 추천 행동 카드 */
 .recommend-box {
   width: 380px;
-  height: 195px;
+  height: 180px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 .rc-ms {
-  margin-top: 5px;
+  margin-top: 15px;
   color: #666;
   line-height: 1.4;
   font-weight: bold;
@@ -514,6 +510,23 @@ header {
 .rc-info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 90px;
   margin-right: 10px;
+  width: 210px;
 }
+
+.rc-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rc-box img {
+  width: 90px;
+  height: auto;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
