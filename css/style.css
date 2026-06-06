@@ -1,39 +1,42 @@
+/*
+   1. 폰트 및 기본 페이지 설정
+                            */
+
+/* '티머니 둥근바람' 웹 폰트 불러오기 (기본 글꼴) */
 @font-face {
   font-family: "TMoneyDungunbaram";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff")
-    format("woff");
+  format("woff");
   font-weight: normal;
   font-display: swap;
 }
 
+/* '망고보드 또박' 웹 폰트 불러오기 (포인트 글꼴) */
 @font-face {
   font-family: "MangoBoardTtobaks";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-L.woff2")
-    format("woff2");
+  format("woff2");
   font-weight: 300;
   font-display: swap;
 }
 
+/* 웹페이지 전체의 기본 여백을 없애고 배경색과 기본 폰트 지정 */
 body {
   font-family: "TMoneyDungunbaram";
   margin: 0;
   background-color: #f8f7fe;
 }
 
-.helloContent {
-  color: #3f384d;
-  font-weight: bold;
-}
-
-.helloComment {
-  color: gray;
-  font-weight: bold;
-}
-
+/* 화면 전체를 가로로 배치하기 위한 메인 레이아웃 (사이드바 + 콘텐츠) */
 .layout {
   display: flex;
 }
 
+/*
+   2. 사이드바 영역 스타일
+                          */
+
+/* 좌측에 고정되는 사이드바 전체 디자인 */
 .sidebar {
   width: 220px;
   height: 100vh;
@@ -42,80 +45,72 @@ body {
   gap: 16px;
 }
 
-.sidebar > div > a {
-  display: flex;
-  align-items: center;
-  padding: 22px 25px;
-
-  color: white;
-  text-decoration: none;
-}
-
-.contentboard {
-  flex: 1;
-  border: 3px solid blue;
-}
-
-.hello-text {
-  margin-left: 30px;
-}
-
-.imagesleep {
-  margin-top: 110px;
-}
-
-.imagesleep img {
-  width: 200px;
-  height: auto;
-  align-items: center;
-
-  display: block;
-  margin: 0 auto;
-}
-
-span {
-  display: block;
-  margin-left: 15px;
-}
-
+/* 로고 크기 및 상하 여백 설정 */
 .logo img {
   width: 200px;
 }
-
 .logo {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
+/* 사이드바 메뉴 링크들의 내부 여백과 글자색 설정 */
+.sidebar > div > a {
+  display: flex;
+  align-items: center;
+  padding: 22px 25px;
+  color: white;
+  text-decoration: none;
+}
+
+/* 사이드바 메뉴에 마우스를 올렸을 때 배경색이 바뀌는 효과 */
 .sidebar div a:hover {
   background-color: #373c66;
   color: white;
 }
 
-.hello-icons {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
+/* 사이드바 하단 이미지 위치 및 중앙 정렬 */
+.imagesleep {
+  margin-top: 110px;
+}
+.imagesleep img {
+  width: 200px;
+  height: auto;
   align-items: center;
-  gap: 25px;
-  /* margin-bottom: 10px; */
-  margin-right: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
-.hello-box {
-  display: flex;
-  margin-top: 15px;
-  margin-left: 20px;
+/* 사이드바 메뉴 아이콘 옆 글자(홈, 분석)의 여백 설정 */
+span {
+  display: block;
+  margin-left: 15px;
 }
+
+/*
+   3. 우측 메인 콘텐츠 및 헤더 영역
+                                 */
+
+/* 메인 화면 우측 영역이 남은 공간을 꽉 채우도록 설정 */
 .container {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
+/* 헤더와 대시보드 내용물이 위아래로 쌓이도록 설정 */
 main {
   display: flex;
   flex-direction: column;
 }
+
+/* 테스트용으로 테두리를 쳐둔 박스 */
+/*.contentboard {*/
+/*  flex: 1;*/
+/*  border: 3px solid blue;*/
+/*}*/
+
+/* 상단 헤더: 인사말과 우측 아이콘들을 양끝으로 배치 */
 header {
   display: flex;
   justify-content: space-between;
@@ -123,6 +118,49 @@ header {
   padding-right: 30px;
 }
 
+/* 헤더 왼쪽 인사말 박스 위치 조정 */
+.hello-box {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.hello-text {
+  margin-left: 30px;
+}
+
+/* 안녕하세요 사용자님 텍스트 폰트 및 색상 */
+.helloContent {
+  color: #3f384d;
+  font-weight: bold;
+}
+
+/* 인사말 아래 부가 설명 텍스트 폰트 및 색상 */
+.helloComment {
+  color: gray;
+  font-weight: bold;
+}
+
+/* 상단 우측 알림/유저 아이콘 가로 정렬 및 간격 조정 */
+.hello-icons {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-right: 10px;
+}
+
+/* 대시보드 컨텐츠들을 가로 상단 기준으로 정렬 */
+.dashboard-box {
+  display: flex;
+  align-items: flex-start;
+}
+
+/*
+   4. 대시보드 카드 영역 - 오늘 분석 안내 배너
+                                           */
+
+/* 분석하기 배너 (배경 이미지, 그림자, 둥글게) */
 .connect-analysis {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 580px;
@@ -134,12 +172,12 @@ header {
   background-size: cover;
 }
 
+/* 배너 내부 글씨 텍스트 스타일 */
 .text1 {
   color: rgb(226, 223, 223);
   margin-left: 40px;
   margin-top: 60px;
 }
-
 .text2 {
   color: rgb(226, 223, 223);
   margin-left: 40px;
@@ -147,6 +185,7 @@ header {
   margin-bottom: 0px;
 }
 
+/* 배너 내부 제목 텍스트 스타일 */
 .connect-analysis > h3 {
   color: white;
   font-size: 33px;
@@ -156,6 +195,7 @@ header {
   margin-bottom: 0px;
 }
 
+/* 오늘 분석하기 버튼 스타일 지정 */
 .bt {
   border: none;
   outline: none;
@@ -171,32 +211,26 @@ header {
   font-weight: 500;
   letter-spacing: 2px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-
   transition: transform 0.1s ease;
 }
 
+/* 버튼을 클릭했을 때 살짝 작아지는 클릭 효과 */
 .bt:active {
   transform: scale(0.95);
 }
 
-.time-box p b {
-  font-size: 35px;
+/*
+   5. 대시보드 우측 요약 카드들 (시간, 달성률, 평균)
+                                               */
+
+/* 작은 요약 카드 3개를 감싸는 래퍼 레이아웃 */
+.wrap-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 530px;
 }
 
-.time-box .hs {
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-.time {
-  color: gray !important;
-  font-weight: bold;
-  margin-left: 20px;
-  font-size: 15px;
-}
-
+/* (1) 최근 수면 시간 카드 스타일 */
 .time-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 220px;
@@ -206,26 +240,36 @@ header {
   border-radius: 16px;
   background-color: white;
 }
-
-.dashboard-box {
-  display: flex;
-  align-items: flex-start;
-}
-
 .time-box h4 {
   margin-left: 20px;
   margin-bottom: 30px;
 }
+.time-box p b {
+  font-size: 35px;
+}
+.time-box .hs {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.time {
+  color: gray !important;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 15px;
+}
 
+/* 회색 바 배경 */
 .bar-bg {
   width: 160px;
-  height: 30px;
   margin-left: 21px;
   height: 12px;
   border-radius: 9999px;
   background-color: #e6e6f4;
 }
 
+/* 진행 상태 보라색 바 (현재 60% 채워짐) */
 .bar-fill {
   width: 60%;
   height: 12px;
@@ -233,6 +277,7 @@ header {
   background-color: #615acb;
 }
 
+/* (2) 목표 달성률 표시 카드 스타일 */
 .per-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 220px;
@@ -242,89 +287,61 @@ header {
   border-radius: 16px;
   background-color: white;
 }
-
 .per-box h4 {
   margin-left: 20px;
-  margin-top: 22px; /* 위쪽 여백을 살짝 주어 안정감 있게 */
-  margin-bottom: 15px; /* 아래 75% 숫자와의 간격을 디자인처럼 확보 */
+  margin-top: 22px;
+  margin-bottom: 15px;
 }
-
 .per-box .per {
   font-size: 35px;
   font-weight: 600;
   margin-left: 20px;
-  margin-top: 0; /* 위쪽 마진을 없애서 h4의 마진만 사용 */
-  margin-bottom: 20px; /* '지난 7월 기준' 텍스트와의 미세한 간격 격리 */
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-
 .per-box p {
   margin-bottom: 0;
 }
-
 .month {
   margin-top: 0;
   margin-left: 20px;
-  font-size: 14px; /* 디자인에 맞춰 폰트 크기 살짝 조절 */
-  color: #8a8a8f !important; /* 조금 더 부드러운 회색으로 변경 */
+  font-size: 14px;
+  color: #8a8a8f !important;
   font-weight: bold;
 }
-
 .per-box img {
-  width: 95px; /* 220px 카드 크기에 맞게 이미지 크기 최적화 */
+  width: 95px;
   height: auto;
-  margin-top: 10px; /* 왼쪽 텍스트 덩어리와 수직 균형을 맞추기 위한 여백 */
-  margin-bottom: 0; /* 기존 80px 제거 */
+  margin-top: 10px;
+  margin-bottom: 0;
   margin-right: 20px;
 }
-
 .per-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* (3) 이번 주 평균 수면 시간 카드 스타일 */
 .average-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 470px;
-  height: 220px; /* 수정 */
-  margin-top: 25px;
-  margin-left: 30px;
-  border-radius: 16px;
-  background-color: white;
-}
-
-.wrap-box {
-  display: flex;
-  flex-wrap: wrap;
-  width: 530px;
-}
-
-.average-box {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  width: 470px;
-
-  /* 💡 원하시는 세로 크기를 여기에 숫자로 딱 지정하세요! */
   height: 190px;
-
   margin-top: 30px;
   margin-left: 30px;
   border-radius: 16px;
   background-color: white;
-  padding: 20px 24px; /* 박스가 줄어든 만큼 위아래 패딩도 살짝 줄임 */
+  padding: 20px 24px;
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
 }
-
-/* (참고) 글씨 마진은 그대로 두거나 살짝만 만지셔도 됩니다 */
 .aver-text {
   font-family: "TMoneyDungunbaram";
   font-size: 16px;
   color: #333333;
   margin: 0 0 8px 0;
 }
-
 .aver {
   font-family: "TMoneyDungunbaram";
   font-size: 22px;
@@ -335,28 +352,49 @@ header {
   padding-right: 0;
   width: 200px;
 }
-
 .aver b {
   font-size: 38px;
   font-weight: 600;
 }
-/* 2. 그래프 이미지가 박스 밖으로 탈출하지 못하게 막기 */
+
+/* 평균 카드 내 그래프 이미지가 넘치지 않도록 제한 */
 .img-box {
   width: 100%;
-  flex: 1; /* 박스 남은 공간을 이미지 영역이 채움 */
+  flex: 1;
   display: flex;
-  justify-content: end; /* 가로 가운데 정렬 */
-  align-items: center; /* 세로 가운데 정렬 */
+  justify-content: end;
+  align-items: center;
   overflow: hidden;
 }
-
 .img-box img {
-  height: auto; /* 원하는 세로 높이 지정 */
-  width: 300px; /* 💡 고정값(250px) 대신 auto를 써야 비율이 깨지지 않습니다 */
+  height: auto;
+  width: 300px;
   display: block;
-  margin-right: 0; /* 💡 불필요한 margin-left: 170px 제거 */
+  margin-right: 0;
 }
 
+/*
+   6. 하단 정보 카드 (상태, 점수, 추천)
+                                         */
+
+/* 하단에 배치되는 카드들 가로로 나란히 정렬 */
+.bottom-card {
+  display: flex;
+  gap: 30px;
+  margin-left: 0px;
+  margin-top: 25px;
+}
+
+/* 하단 공통 텍스트 스타일 */
+.emotion-text {
+  font-family: "TMoneyDungunbaram";
+  font-size: 16px;
+  color: #333333;
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+
+/* (1) 수면 상태 (표정 이모지) 카드 */
 .emotion-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 320px;
@@ -366,22 +404,12 @@ header {
   border-radius: 16px;
   background-color: white;
 }
-
-.emotion-text {
-  font-family: "TMoneyDungunbaram";
-  font-size: 16px;
-  color: #333333;
-  margin-left: 30px;
-  margin-bottom: 0;
-}
-
 .emotion {
   font-size: 30px;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 5px;
 }
-
 .emo-box {
   display: flex;
   align-items: center;
@@ -389,14 +417,12 @@ header {
   padding-left: 0;
   padding-right: 0;
 }
-
 .emo-box img {
   width: 150px;
   margin: 0;
   padding: 0;
   margin-bottom: 67px;
 }
-
 .emo-info {
   display: flex;
   flex-direction: column;
@@ -404,7 +430,6 @@ header {
   margin-right: 10px;
   margin-top: 20px;
 }
-
 .emo-ms {
   margin-top: 5px;
   color: #666;
@@ -413,21 +438,7 @@ header {
   letter-spacing: 2px;
 }
 
-.bottom-card {
-  display: flex;
-  gap: 30px;
-  margin-left: 0px;
-  margin-top: 25px;
-}
-
-.recommend-box {
-  width: 380px;
-  height: 195px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-}
-
+/* (2) 컨디션 점수 카드 */
 .score-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 320px;
@@ -436,37 +447,31 @@ header {
   border-radius: 16px;
   background-color: white;
 }
-
 .sc-box {
   align-items: center;
   gap: 10px;
   padding-left: 0;
   padding-right: 0;
 }
-
 .score-text {
   margin-left: 20px;
 }
-
 .score-info {
   display: flex;
   flex-direction: column;
   margin-bottom: 90px;
   margin-right: 10px;
 }
-
 .score b {
   font-size: 40px;
   font-weight: 800;
   margin-top: 0;
   margin-bottom: 5px;
 }
-
 .score {
   margin-left: 20px;
   margin-top: 0;
 }
-
 .score-ms {
   margin-top: 5px;
   color: #666;
@@ -476,21 +481,27 @@ header {
   font-size: 13px;
   margin-left: 20px;
 }
-
 .sc-box img {
-  width: 140px; /* 220px 카드 크기에 맞게 이미지 크기 최적화 */
+  width: 140px;
   height: auto;
-  margin-top: 10px; /* 왼쪽 텍스트 덩어리와 수직 균형을 맞추기 위한 여백 */
-  margin-bottom: 70px; /* 기존 80px 제거 */
+  margin-top: 10px;
+  margin-bottom: 70px;
   margin-right: 20px;
 }
-
 .sc-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* (3) 추천 행동 카드 */
+.recommend-box {
+  width: 380px;
+  height: 195px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
 .rc-ms {
   margin-top: 5px;
   color: #666;
@@ -500,7 +511,6 @@ header {
   font-size: 13px;
   margin-left: 15px;
 }
-
 .rc-info {
   display: flex;
   flex-direction: column;
