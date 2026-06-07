@@ -6,11 +6,10 @@
 @font-face {
   font-family: "TMoneyDungunbaram";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff")
-  format("woff");
+    format("woff");
   font-weight: normal;
   font-display: swap;
 }
-
 
 /* 웹페이지 전체의 기본 여백을 없애고 배경색과 기본 폰트 지정 */
 body {
@@ -88,7 +87,6 @@ span {
   flex: 1;
   display: flex;
   flex-direction: column;
-
 }
 
 /* 헤더와 대시보드 내용물이 위아래로 쌓이도록 설정 */
@@ -262,9 +260,9 @@ header {
   background-color: #e6e6f4;
 }
 
-/* 진행 상태 보라색 바 (현재 60% 채워짐) */
+/* 진행 상태 보라색 바 (현재 80% 채워짐) */
 .bar-fill {
-  width: 60%;
+  width: 80%;
   height: 12px;
   border-radius: 9999px;
   background-color: #615acb;
@@ -529,4 +527,3 @@ header {
   margin-bottom: 10px;
   margin-left: 15px;
 }
-
