@@ -1,0 +1,166 @@
+/*
+   1. 폰트 및 기본 페이지 설정
+                            */
+
+/* '티머니 둥근바람' 웹 폰트 불러오기 (기본 글꼴) */
+@font-face {
+  font-family: "TMoneyDungunbaram";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* 웹페이지 전체의 기본 여백을 없애고 배경색과 기본 폰트 지정 */
+body {
+  font-family: "TMoneyDungunbaram";
+  margin: 0;
+  background-color: #f8f7fe;
+}
+
+/* 화면 전체를 가로로 배치하기 위한 메인 레이아웃 (사이드바 + 콘텐츠) */
+.layout {
+  display: flex;
+}
+
+/*
+   2. 사이드바 영역 스타일
+                          */
+
+/* 좌측에 고정되는 사이드바 전체 디자인 */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #181f4a;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 로고 크기 및 상하 여백 설정 */
+.logo img {
+  width: 200px;
+}
+.logo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* 사이드바 메뉴 링크들의 내부 여백과 글자색 설정 */
+.sidebar > div > a {
+  display: flex;
+  align-items: center;
+  padding: 22px 25px;
+  color: white;
+  text-decoration: none;
+}
+
+/* 사이드바 메뉴에 마우스를 올렸을 때 배경색이 바뀌는 효과 */
+.sidebar div a:hover {
+  background-color: #373c66;
+  color: white;
+}
+
+/* 사이드바 하단 이미지 위치 및 중앙 정렬 */
+.imagesleep {
+  margin-top: 110px;
+}
+.imagesleep img {
+  width: 200px;
+  height: auto;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 사이드바 메뉴 아이콘 옆 글자(홈, 분석)의 여백 설정 */
+span {
+  display: block;
+  margin-left: 15px;
+}
+
+/* 메인 화면 우측 영역이 남은 공간을 꽉 채우도록 설정 */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더와 대시보드 내용물이 위아래로 쌓이도록 설정 */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 테스트용으로 테두리를 쳐둔 박스 */
+/*.contentboard {*/
+/*  flex: 1;*/
+/*  border: 3px solid blue;*/
+/*}*/
+
+/* 상단 헤더: 인사말과 우측 아이콘들을 양끝으로 배치 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 30px;
+}
+
+/* 헤더 왼쪽 인사말 박스 위치 조정 */
+.hello-box {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝으로 */
+  align-items: center; /* 세로 가운데 */
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 30px; /* 버튼이 너무 오른쪽에 붙지 않게 */
+}
+.hello-text {
+  margin-left: 35px;
+  margin-top: 20px;
+  line-height: 20px;
+}
+
+/* 안녕하세요 사용자님 텍스트 폰트 및 색상 */
+.helloContent {
+  color: #3f384d;
+  font-weight: bold;
+  font-size: 27px;
+}
+
+/* 인사말 아래 부가 설명 텍스트 폰트 및 색상 */
+.helloComment {
+  color: gray;
+  font-weight: bold;
+}
+
+.report-bt {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.bt {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #5c56c6;
+  padding: 5px 0px;
+  margin-left: 0px;
+  margin-top: 25px;
+  margin-right: 15px;
+  width: 140px;
+  height: 45px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  transition: transform 0.1s ease;
+}
+
+/* 버튼을 클릭했을 때 살짝 작아지는 클릭 효과 */
+.bt:active {
+  transform: scale(0.95);
+}
