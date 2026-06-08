@@ -168,7 +168,7 @@ header {
 .connect-analysis {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 800px;
-  height: 505px;
+  height: 530px;
   margin-top: 25px;
   margin-left: 50px;
   border-radius: 16px;
@@ -235,4 +235,144 @@ header {
 #text2 {
   padding-top: 0;
   margin-top: 0;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time h4 {
+  margin-left: 40px;
+}
+
+.time p {
+  margin-right: 40px;
+}
+
+input[type="range"] {
+  width: 600px;
+  height: 8px;
+  appearance: none;
+  border-radius: 999px;
+  background: #e5e5ef;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #6c63ff;
+  cursor: pointer;
+}
+
+#slider {
+  width: 500px;
+  height: 8px;
+  appearance: none;
+  border-radius: 999px;
+  background: linear-gradient(to right, #6c63ff 50%, #e5e5ef 50%);
+
+  margin-left: 100px;
+  width: 600px;
+}
+
+.timetime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.one {
+  margin-left: 40px;
+}
+
+.two {
+  margin-right: 40px;
+}
+
+.tip {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 800px;
+  height: 80px;
+  margin-top: 20px;
+  margin-left: 0px;
+  border-radius: 16px;
+  background-color: #f0eefc;
+}
+
+.tip p {
+  margin-left: 30px;
+  margin-bottom: 0;
+  color: #525252;
+  margin-top: 0;
+}
+
+.tip img {
+  width: 60px;
+}
+
+.dashboard-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.bt-anal {
+  display: flex;
+  align-items: flex-end;
+}
+
+.bt2 {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #5c56c6;
+  padding: 10px 20px;
+  margin-left: 40px;
+  margin-top: 50px;
+  width: 300px;
+  height: 70px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  transition: transform 0.1s ease;
+  font-size: 20px;
+  margin-left: 70px;
+  margin-top: 150px;
+}
+
+.bt2:active {
+  transform: scale(0.95);
+}
+
+.bt-anal {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  height: 180px;
+  margin-top: 25px;
+  margin-left: 30px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.comment p {
+  color: #2c2c2c;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.comment img {
+  width: 200px;
+  margin-left: 130px;
+  margin-bottom: 200px;
 }
