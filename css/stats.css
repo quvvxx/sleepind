@@ -1,0 +1,79 @@
+/*
+   1. 폰트 및 기본 페이지 설정
+                            */
+
+/* '티머니 둥근바람' 웹 폰트 불러오기 (기본 글꼴) */
+@font-face {
+  font-family: "TMoneyDungunbaram";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* 웹페이지 전체의 기본 여백을 없애고 배경색과 기본 폰트 지정 */
+body {
+  font-family: "TMoneyDungunbaram";
+  margin: 0;
+  background-color: #fafafe;
+}
+
+/* 화면 전체를 가로로 배치하기 위한 메인 레이아웃 (사이드바 + 콘텐츠) */
+.layout {
+  display: flex;
+}
+
+/*
+   2. 사이드바 영역 스타일
+                          */
+
+/* 좌측에 고정되는 사이드바 전체 디자인 */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #181f4a;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 로고 크기 및 상하 여백 설정 */
+.logo img {
+  width: 200px;
+}
+.logo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* 사이드바 메뉴 링크들의 내부 여백과 글자색 설정 */
+.sidebar > div > a {
+  display: flex;
+  align-items: center;
+  padding: 22px 25px;
+  color: white;
+  text-decoration: none;
+}
+
+/* 사이드바 메뉴에 마우스를 올렸을 때 배경색이 바뀌는 효과 */
+.sidebar div a:hover {
+  background-color: #373c66;
+  color: white;
+}
+
+/* 사이드바 하단 이미지 위치 및 중앙 정렬 */
+.imagesleep {
+  margin-top: 110px;
+}
+.imagesleep img {
+  width: 200px;
+  height: auto;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 사이드바 메뉴 아이콘 옆 글자(홈, 분석)의 여백 설정 */
+span {
+  display: block;
+  margin-left: 15px;
+}
