@@ -77,3 +77,142 @@ span {
   display: block;
   margin-left: 15px;
 }
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더와 대시보드 내용물이 위아래로 쌓이도록 설정 */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 테스트용으로 테두리를 쳐둔 박스 */
+/*.contentboard {*/
+/*  flex: 1;*/
+/*  border: 3px solid blue;*/
+/*}*/
+
+/* 상단 헤더: 인사말과 우측 아이콘들을 양끝으로 배치 */
+/* 상단 헤더 전체 영역 */
+header {
+  display: flex;
+  width: 100%;
+}
+
+/* 헤더 안에서 텍스트와 토글을 양끝으로 밀어주는 박스 */
+.hello-box {
+  display: flex;
+  flex: 1; /* width: 100% 대신 flex: 1을 쓰면 여백과 충돌하지 않고 남은 공간을 꽉 채웁니다! */
+  justify-content: space-between; /* 양쪽 끝으로 배치 */
+  align-items: center; /* 위아래 중앙 정렬 */
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+/* 왼쪽 인사말 텍스트 그룹 */
+.hello-text {
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+/* 메인 인사말 텍스트 폰트 및 색상 */
+.helloContent {
+  color: #3f384d;
+  font-weight: bold;
+  font-size: 27px;
+  margin: 0; /* 기본 마진을 없애서 텍스트 겹침/깨짐 방지 */
+  margin-bottom: 16px;
+  margin-top: 10px/* 아래 설명과 살짝 띄워주기 */
+}
+
+/* 인사말 아래 부가 설명 텍스트 폰트 및 색상 */
+.helloComment {
+  color: gray;
+  font-weight: bold;
+  margin: 0; /* 기본 마진 제거 */
+}
+
+/* 우측 드롭다운(토글) 버튼 스타일 */
+.select-box select {
+  width: 140px;
+  height: 50px;
+  border: 3px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+  background-color: white;
+  cursor: pointer;
+  margin-right: 40px; /* 오른쪽 벽에서 살짝 띄워주기 */
+  margin-top: 30px;
+}
+
+.dashboard-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px; /* ✨ 카드 사이의 간격을 30px로 일정하게 띄워줍니다 */
+  padding-top: 25px; /* 전체 박스 위쪽 여백 */
+  padding-left: 30px;
+}
+
+.time-box {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 290px;
+  height: 220px;
+  border-radius: 16px;
+  background-color: white;
+}
+.time-box h4 {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.time-box p b {
+  font-size: 35px;
+}
+
+.time-box p {
+  letter-spacing: 2px;
+}
+.time-box .hs {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left:78px;
+  margin-top: 50px;
+
+}
+
+.time {
+  color: gray !important;
+  font-weight: bold;
+  margin-left: 105px;
+  font-size: 15px;
+}
+
+.time-box2 p b {
+  font-size: 50px;
+}
+.time-box2 .hs {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left:110px;
+  margin-top: 40px;
+
+}
+
+.time-box2 {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 290px;
+  height: 220px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.time-box2 h4 {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
