@@ -126,7 +126,7 @@ header {
   font-size: 27px;
   margin: 0; /* 기본 마진을 없애서 텍스트 겹침/깨짐 방지 */
   margin-bottom: 16px;
-  margin-top: 10px/* 아래 설명과 살짝 띄워주기 */
+  margin-top: 10px; /* 아래 설명과 살짝 띄워주기 */
 }
 
 /* 인사말 아래 부가 설명 텍스트 폰트 및 색상 */
@@ -163,7 +163,7 @@ header {
 .time-box {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 290px;
-  height: 220px;
+  height: 200px;
   border-radius: 16px;
   background-color: white;
 }
@@ -181,9 +181,8 @@ header {
 .time-box .hs {
   font-size: 20px;
   font-weight: bold;
-  margin-left:78px;
+  margin-left: 78px;
   margin-top: 50px;
-
 }
 
 .time {
@@ -199,15 +198,14 @@ header {
 .time-box2 .hs {
   font-size: 20px;
   font-weight: bold;
-  margin-left:110px;
-  margin-top: 40px;
-
+  margin-left: 110px;
+  margin-top: 30px;
 }
 
 .time-box2 {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   width: 290px;
-  height: 220px;
+  height: 200px;
   border-radius: 16px;
   background-color: white;
 }
